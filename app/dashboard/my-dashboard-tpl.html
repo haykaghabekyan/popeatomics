@@ -1,0 +1,104 @@
+<div id="dashboard">
+    <h3>Dashboard</h3>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Threat level</div>
+                <div class="panel-body">
+                    <div class="chart" my-gauge-chart chart-data="threatLevelGauge"></div>
+                </div>
+                <div class="panel-footer text-center">
+                    <div class="btn-group">
+                        <span class="btn btn-primary" ng-model="twoMonthsAvg" uib-btn-radio="'today'">Today</span>
+                        <span class="btn btn-primary" ng-model="twoMonthsAvg" uib-btn-radio="'lastweek'">Last week</span>
+                        <span class="btn btn-primary" ng-model="twoMonthsAvg" uib-btn-radio="'onemonthaverage'">1 month avg</span>
+                        <span class="btn btn-primary" ng-model="twoMonthsAvg" uib-btn-radio="'alltime'">All time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Alerts</div>
+                <div class="panel-body">
+                    <div class="clearfix text-center">
+                        <span class="pull-left">Host subnets</span>
+                        <span class="">Callbacks</span>
+                        <span class="pull-right">Hosts</span>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        No data based on selection {{ "(" + alerts + ")" }}
+                    </div>
+                </div>
+                <div class="panel-footer text-center">
+                    <div class="btn-group">
+                        <span class="btn btn-primary" ng-model="alerts" uib-btn-radio="'day'">Day</span>
+                        <span class="btn btn-primary" ng-model="alerts" uib-btn-radio="'week'">Week</span>
+                        <span class="btn btn-primary" ng-model="alerts" uib-btn-radio="'month'">Month</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Top hosts</div>
+                <div class="panel-body">
+                    <div class="text-center">
+                        No data based on selection {{ "(" + topHosts + ")" }}
+                    </div>
+                </div>
+                <div class="panel-footer text-center">
+                    <span ng-model="topHostsAcknowledged" uib-btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false" class="btn btn-default" data-toggle="tooltip" data-placement="top" uib-tooltip="Include acknowledged alerts">
+                        <i class="fa fa-check-circle" ng-class="topHostsAcknowledged ? 'fa-check-circle' : 'fa-check-circle-o'"></i>
+                    </span>
+                    <div class="btn-group">
+                        <span class="btn btn-primary" ng-model="topHosts" uib-btn-radio="'day'">Day</span>
+                        <span class="btn btn-primary" ng-model="topHosts" uib-btn-radio="'week'">Week</span>
+                        <span class="btn btn-primary" ng-model="topHosts" uib-btn-radio="'month'">Month</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Daily Monitored Traffic</div>
+                <div class="panel-body">
+                    <div class="chart" my-line-chart chart-data="dailyMonitoredTraffic"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Appliance Utilization</div>
+                <div class="panel-body">
+                    <h4>Your appliance is in good condition</h4>
+                    <div class="col-md-12">
+                        <h5>Utilization summary</h5>
+                        <div class="chart" my-line-chart chart-data="utilizationSummaryChart"></div>
+                    </div>
+                    <div>
+                        <div class="col-sm-6">
+                            <h5>Network Traffic</h5>
+                            <div class="chart" my-line-chart chart-data="networkTraffic"></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5>Total Log Events</h5>
+                            <div class="chart" my-line-chart chart-data="totalLgEvents"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

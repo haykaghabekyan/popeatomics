@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyAppModule">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pope Atomics</title>
+
+    <base href="/">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/font-awesome-4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style type="text/css" media="all">
+        [ngcloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ngform {
+            display: block;
+        }
+    </style>
+
+</head>
+<body ng-controller="myAppController" ng-class="{'logged-in' : isLoggedIn}" ng-cloak>
+    <nav class="navbar navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-show="isLoggedIn" ng-click="toggleSidebar = !toggleSidebar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Pope Atomics</a>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" ng-show="isLoggedIn" ng-class="{'toggle-sidebar' : toggleSidebar}">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#alerts">Alerts</a>
+                </li>
+                <li>
+                    <a href="#forensics">Forensics</a>
+                </li>
+                <li>
+                    <a href="" data-toggle="collapse" data-target="#target2">
+                        Policy management <span class="caret"></span>
+                    </a>
+                    <ul id="target2" class="nav collapse" aria-expanded="false">
+                        <li>
+                            <a href="#policy-management/objects">Objects</a>
+                        </li>
+                        <li>
+                            <a href="#policy-management/users">Users</a>
+                        </li>
+                        <li>
+                            <a href="#policy-management/networks">Networks</a>
+                        </li>
+                        <li>
+                            <a href="#policy-management/locations">Locations</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href data-toggle="collapse" data-target="#target3">
+                        System management <span class="caret"></span>
+                    </a>
+                    <ul id="target3" class="nav collapse" aria-expanded="false">
+                        <li>
+                            <a href="#system-management/health">Health</a>
+                        </li>
+                        <li>
+                            <a href="#system-management/upgrade">Upgrade</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href data-toggle="collapse" data-target="#target4">
+                        Configuration <span class="caret"></span>
+                    </a>
+                    <ul id="target4" class="nav collapse" aria-expanded="false">
+                        <li>
+                            <a href="#configuration/active-direction">Active directory</a>
+                        </li>
+                        <li>
+                            <a href="#configuration/snmp">SNMP configuration</a>
+                        </li>
+                        <li>
+                            <a href="#configuration/syslog">Syslog</a>
+                        </li>
+                        <li>
+                            <a href="#configuration/email">Email</a>
+                        </li>
+                        <li>
+                            <a href="#configuration/user">User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#policy">Policy</a>
+                </li>
+                <li data-toggle="collapse" data-target="#target5">
+                    <a href>Context <span class="caret"></span></a>
+                    <ul id="target5" class="nav collapse" aria-expanded="false">
+                        <li>
+                            <a href="#context/questions">Questions</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#logout">Log out</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <script src="assets/libs/jquery/jquery-2.2.0.js"></script>
+
+    <!-- Bootstrap 3.3.5 -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="assets/libs/angular/angular-1.4.9.js"></script>
+    <script src="assets/libs/angular-ui/angular-ui-router.js"></script>
+    <script src="assets/libs/angular-filter/angular-filter.js"></script>
+    <script src="assets/libs/angular-ui/ui-bootstrap-tpls-1.2.0.js"></script>
+
+
+    <script src="assets/libs/amcharts/3/amcharts.js"></script>
+    <script src="assets/libs/amcharts/3/gauge.js"></script>
+    <script src="assets/libs/amcharts/3/serial.js"></script>
+    <script src="assets/libs/amcharts/3/themes/light.js"></script>
+
+    <script src="compressed/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<div id="users">
+    <h3>Users</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr class="info">
+                <th ng-click="sortBy('firstName')">
+                    First name <span ng-show="sort.type == 'firstName'" ng-class="{'fa-caret-down' : !sort.reverse, 'fa-caret-up' : sort.reverse}" class="fa"></span>
+                </th>
+                <th ng-click="sortBy('lastName')">
+                    Last name  <span ng-show="sort.type == 'lastName'" ng-class="{'fa-caret-down' : !sort.reverse, 'fa-caret-up' : sort.reverse}" class="fa"></span>
+                </th>
+                <th ng-click="sortBy('email')">
+                    Email <span ng-show="sort.type == 'email'" ng-class="{'fa-caret-down' : !sort.reverse, 'fa-caret-up' : sort.reverse}" class="fa"></span>
+                </th>
+                <th ng-click="sortBy('location')">
+                    Location <span ng-show="sort.type == 'location'" ng-class="{'fa-caret-down' : !sort.reverse, 'fa-caret-up' : sort.reverse}" class="fa"></span>
+                </th>
+                <th ng-click="sortBy('department')">
+                    Business unit <span ng-show="sort.type == 'department'" ng-class="{'fa-caret-down' : !sort.reverse, 'fa-caret-up' : sort.reverse}" class="fa"></span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users | orderBy:sort.type:sort.reverse">
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.location }}</td>
+                <td>{{ user.department }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

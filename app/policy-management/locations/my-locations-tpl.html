@@ -1,0 +1,36 @@
+<div id="locations">
+
+    <h3>Locations</h3>
+
+    <hr>
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr class="info">
+                    <th style="width: 20%">First name</th>
+                    <th style="width: 20%">Last name</th>
+                    <th style="width: 40%">Email</th>
+                    <th style="width: 30%">Location</th>
+                </tr>
+            </thead>
+        </table>
+        <table class="table table-striped" id="accordion" ng-repeat="(key, usersGroup) in users | groupBy: 'location'">
+            <thead data-toggle="collapse" data-parent="#accordion" href="#{{ 'collapse' + key | slugify:'-' }}" aria-expanded="false">
+                <tr class="active">
+                    <td colspan="4">
+                        <b>{{ key }}</b> <i class="pull-right fa"></i>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="{{ 'collapse' + key | slugify:'-' }}" class="collapse">
+                <tr ng-repeat="user in usersGroup">
+                    <td style="width: 20%;">{{ user.firstName }}</td>
+                    <td style="width: 20%;">{{ user.lastName }}</td>
+                    <td style="width: 40%;">{{ user.email }}</td>
+                    <td style="width: 30%;">{{ user.location }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div id="objects">
+
+    <h3>Objects</h3>
+
+    <hr>
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr class="info">
+                    <th style="width: 15%">First name</th>
+                    <th style="width: 15%">Last name</th>
+                    <th style="width: 40%">Email</th>
+                    <th style="width: 15%">Department</th>
+                    <th style="width: 15%">Location</th>
+                </tr>
+            </thead>
+        </table>
+        <table class="table table-striped" ng-repeat="(key, usersGroup) in users | groupBy: 'groupName'">
+            <thead data-toggle="collapse" href="#{{ 'collapse' + key | slugify:'-' }}" aria-expanded="false">
+                <tr class="active">
+                    <td colspan="5">
+                        <b>{{ key }}</b> <i class="pull-right fa"></i>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="{{ 'collapse' + key | slugify:'-' }}" class="collapse">
+                <tr ng-repeat="user in usersGroup">
+                    <td style="width: 15%;">{{ user.firstName }}</td>
+                    <td style="width: 15%;">{{ user.lastName }}</td>
+                    <td style="width: 40%;">{{ user.email }}</td>
+                    <td style="width: 15%;">{{ user.department }}</td>
+                    <td style="width: 15%;">{{ user.location }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+
+    <div>
+        <table class="table">
+            <thead>
+            <tr class="info">
+                <th style="width: 40%">Network</th>
+                <th style="width: 30%">Location</th>
+                <th style="width: 30%">IP(s)</th>
+            </tr>
+            </thead>
+        </table>
+        <table class="table table-striped" ng-repeat="(key2, networksGroup) in networks | groupBy: 'location'">
+            <thead data-toggle="collapse" href="#{{ 'collapse' + key2 | slugify:'-' }}" aria-expanded="false">
+            <tr class="active">
+                <td colspan="3">
+                    <b>{{ key2 }}</b> <i class="pull-right fa"></i>
+                </td>
+            </tr>
+            </thead>
+            <tbody id="{{ 'collapse' + key2 | slugify:'-' }}" class="collapse">
+            <tr ng-repeat="network in networksGroup">
+                <td style="width: 40%;">{{ network.name }}</td>
+                <td style="width: 30%;">{{ network.location }}</td>
+                <td style="width: 30%;">{{ network.ip }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

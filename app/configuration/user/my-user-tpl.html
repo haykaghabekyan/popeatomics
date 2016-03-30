@@ -1,0 +1,215 @@
+<h4>User</h4>
+
+<hr>
+
+<div class="row">
+    <div class="col-xs-6">
+        Jsmith@pope-atomics.com
+    </div>
+    <div class="col-xs-3">
+        John
+    </div>
+    <div class="col-xs-3">
+        Smith
+    </div>
+</div>
+
+<div class="row text-center">
+    <span class="btn btn-success">Save</span>
+    <span class="btn btn-default">Cancel</span>
+    <span class="btn btn-danger">Delete</span>
+    <span class="btn btn-info">Manage policy</span>
+    <span class="btn btn-info">View policy</span>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-2">Basic info</div>
+    <div class="col-xs-10">
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Keyboard layout:</label>
+                    <select class="form-control">
+                        <option>AUTO</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label>First name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Last name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Description:</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label>User principal name:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2">Contact info</div>
+    <div class="col-xs-10">
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label>Phone:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label>Cell phone:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-2">Administration</div>
+    <div class="col-xs-10">
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label>Authentication:</label>
+                    <select class="form-control">
+                        <option>LDAP</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label>Account status:</label>
+                    <div>
+                        <label class="radio-inline"><input type="radio" checked name="account-status">Enabled</label>
+                        <label class="radio-inline"><input type="radio" name="account-status">Disabled</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label>Activate account:</label>
+                    <div>
+                        <label class="radio-inline"><input type="radio" checked name="activate-account">Now</label>
+                        <label class="radio-inline"><input type="radio" name="activate-account">Later</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label>Terminate session upon account expiration:</label>
+                    <div>
+                        <label class="radio-inline"><input type="radio" checked name="terminate-session">Yes</label>
+                        <label class="radio-inline"><input type="radio" name="terminate-session">No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+
+            </div>
+            <div class="col-xs-7">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div><label>Login IP Ranges:</label></div>
+                <div class="form-group">
+                    <textarea class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Roles</div>
+    <div class="col-xs-10">
+        <div class="row">
+            <div class="col-xs-4">
+                <div>
+                    <label>Available roles:</label>
+                </div>
+                <div class="form-group-sm">
+                    <select class="form-control">
+                        <option>Select a role</option>
+                        <option>Administrator</option>
+                        <option>Reporter</option>
+                        <option>Analyst</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-xs-4">
+                <strong class="text-danger">No role selected</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="#">View inherited roles</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Access time</div>
+    <div class="col-xs-10">
+        <a href="#">Add rules</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Groups</div>
+    <div class="col-xs-10">
+        <div class="row">
+            <div class="col-sm-5">
+                <div>
+                    <label>Available roles:</label>
+                </div>
+                <div class="form-group pull-left">
+                    <select class="form-control">
+                        <option>Select a user-group</option>
+                        <option>Chicago</option>
+                        <option>New York</option>
+                        <option>Global</option>
+                        <option>Los Angeles</option>
+                        <option>Yerevan</option>
+                    </select>
+                </div>
+                <div class="pull-left" style="margin-left: 20px;">
+                    <button class="btn btn-default" ng-click="addUserGroup()">Add</button>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div>test@example.com</div>
+                <div style="color: #9E9494;">(Click on an item to remove it from the list)</div>
+            </div>
+        </div>
+    </div>
+</div>

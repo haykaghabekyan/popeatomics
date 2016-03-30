@@ -1,0 +1,137 @@
+[{
+  "name": "Chicago Voice VLAN",
+  "ip": "10.0.100.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Users Network",
+  "ip": "10.0.101.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Wireless Network",
+  "ip": "10.0.103.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Backup and Storage",
+  "ip": "10.0.102.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Development Database tier",
+  "ip": "10.0.150.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Development App Tier",
+  "ip": "10.0.151.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Development Web Tier",
+  "ip": "10.0.152.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Production Database Tier",
+  "ip": "10.0.200.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Production App Tier",
+  "ip": "10.0.201.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Production Web/DMZ Tier",
+  "ip": "10.0.202.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Back Office Systems",
+  "ip": "10.0.250.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Chicago Tools Network",
+  "ip": "10.0.251.0/24",
+  "location": "Chicago"
+}, {
+  "name": "Los Angeles Backup and Storage",
+  "ip": "10.10.102.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angeles Development Database Tier",
+  "ip": "10.10.150.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angeles Development App Tier",
+  "ip": "10.10.151.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angels Development Web Tier",
+  "ip": "10.10.152.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angeles Voice VLAN",
+  "ip": "10.10.100.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angeles Users Network",
+  "ip": "10.10.100.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angeles Wireless Network",
+  "ip": "10.10.103.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angeles Voice VLAN",
+  "ip": "10.30.103.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angeles Users Network",
+  "ip": "10.30.103.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "Los Angeles Wireless Network",
+  "ip": "10.30.103.0/24",
+  "location": "Los Angeles"
+}, {
+  "name": "New York Voice VLAN",
+  "ip": "10.20.100.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Users Network",
+  "ip": "10.20.101.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Wireless Network",
+  "ip": "10.20.103.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Backup and Storage",
+  "ip": "10.20.102.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Development Database tier",
+  "ip": "10.20.150.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Development App Tier",
+  "ip": "10.20.151.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Development Web Tier",
+  "ip": "10.20.152.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Production Database Tier",
+  "ip": "10.20.200.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Production App Tier",
+  "ip": "10.20.201.0/24",
+  "location": "New York"
+}, {
+  "name": "New york Production Web/DMZ Tier",
+  "ip": "10.20.202.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Back Office Systems",
+  "ip": "10.20.250.0/24",
+  "location": "New York"
+}, {
+  "name": "New York Tools Network",
+  "ip": "10.20.251.0/24",
+  "location": "New York"
+}]

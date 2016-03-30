@@ -1,0 +1,21 @@
+<div id="networks">
+
+    <h3>Networks</h3>
+
+    <hr>
+
+    <table class="table table-striped">
+        <thead>
+            <tr class="info">
+                <th>Network</th>
+                <th>IP(s)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="network in networks">
+                <td>{{ network.name }}</td>
+                <td>{{ network.ip }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

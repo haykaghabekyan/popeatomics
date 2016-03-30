@@ -1,0 +1,52 @@
+<h4>Hosts</h4>
+
+<hr>
+
+<div>
+    <span class="btn btn-success" ng-click="addHost()">
+        <i class="fa fa-plus"></i>
+    </span>
+    <span class="btn btn-danger" ng-click="removeHosts()">
+        <i class="fa fa-remove"></i>
+    </span>
+</div>
+
+<br>
+
+<table class="table table-striped">
+    <thead>
+        <tr class="info">
+            <th>
+                <input type="checkbox" ng-click="checkAllHosts()">
+            </th>
+            <th>Name</th>
+            <th>Host</th>
+            <th>Total memory</th>
+            <th>CPU</th>
+            <th>OS</th>
+            <th>Uptime</th>
+            <th>Updates</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr ng-repeat="host in hosts">
+            <td>
+                <input type="checkbox" ng-model="host.selected">
+            </td>
+            <td>{{ host.name }}</td>
+            <td>{{ host.host }}</td>
+            <td>{{ host.totalMemory }}</td>
+            <td>{{ host.cpu }}</td>
+            <td>{{ host.os }}</td>
+            <td>{{ host.uptime }}</td>
+            <td>
+                <span ng-show="!host.updates.available">{{ host.updates.text }}</span>
+                <a href class="text-warning" ng-show="host.updates.available && !host.updating" ng-click="update(host)">Update now</a>
+                <span class="text-info" ng-show="host.updating">Updating...</span>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
