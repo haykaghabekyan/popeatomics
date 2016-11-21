@@ -2,7 +2,5 @@
 
 # Angular 1 app
 
-# production
-<h3>After changes in JS files, go to gulp and run: gulp compress</h3>
-<p>It will compress JS files</p>
+<h3>For production run <b>gulp compress</b> inside gulp directory</h3>
 
